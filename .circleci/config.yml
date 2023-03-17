@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   say-hello:
     docker:
-      - image: image: cimg/ruby:2.7.2
+      - image: cimg/ruby:2.7.2
     steps:
       - checkout
       - run:
