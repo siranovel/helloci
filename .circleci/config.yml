@@ -3,12 +3,12 @@ version: 2.1
 jobs:
   say-hello:
     docker:
-      - image: cimg/base:stable
+      - image: image: cimg/ruby:2.7.2
     steps:
       - checkout
       - run:
           name: "Say Hello"
-          command: "echo hello, world!" 
+          command: ruby --version 
 
 workflows:
   version: 2.1
