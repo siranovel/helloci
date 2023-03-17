@@ -1,5 +1,7 @@
 version: 2.1
 
+orbs:
+  ruby: circleci/ruby@2.0.0
 jobs:
   say-hello:
     docker:
