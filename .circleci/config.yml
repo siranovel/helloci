@@ -3,7 +3,7 @@ version: 2.1
 orbs:
   ruby: circleci/ruby@2.0.0
 jobs:
-  say-hello:
+  build:
     docker:
       - image: cimg/ruby:2.7.2
     steps:
@@ -16,7 +16,7 @@ workflows:
   version: 2.1
   my-workflow:
     jobs:
-      - say-hello:
+      - build:
           filters:
             branches:
               only:
