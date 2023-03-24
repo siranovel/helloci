@@ -18,7 +18,9 @@ jobs:
       - checkout
       - run:
           name: "gem test"
-          command: ruby -S sample/samplez.rb 
+          command: |
+            ls
+            ruby -S sample/samplez.rb 
 
 workflows:
   version: 2.1
