@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run:
           name: "Say Hello"
-          command: ruby -S gem build helloci.gemspec 
+          command: ruby -S gem build *.gemspec 
 
 workflows:
   version: 2.1
