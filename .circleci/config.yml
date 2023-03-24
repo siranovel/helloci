@@ -10,7 +10,9 @@ jobs:
       - checkout
       - run:
           name: "gem build"
-          command: ruby -S gem build *.gemspec 
+          command: |
+            ruby -S gem build *.gemspec
+            ruby -S gem install *.gem 
   test:
     docker:
       - image: cimg/ruby:2.7.2
