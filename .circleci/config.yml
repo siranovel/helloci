@@ -9,8 +9,16 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say Hello"
+          name: "gem build"
           command: ruby -S gem build *.gemspec 
+  test:
+    docker:
+      - image: cimg/ruby:2.7.2
+    steps:
+      - checkout
+      - run:
+          name: "gem test"
+          command: ruby -S sample/samplez.rb 
 
 workflows:
   version: 2.1
@@ -21,3 +29,6 @@ workflows:
             branches:
               only:
                 - main
+      - test:
+          require:
+            build
