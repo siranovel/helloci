@@ -31,7 +31,6 @@ jobs:
       - run:
           name: "gem push"
           command: |
-            cat ~/.gem/credentials
             ruby -S gem build *.gemspec
             ruby -S gem push *.gem       
 workflows:
