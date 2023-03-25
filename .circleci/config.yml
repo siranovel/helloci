@@ -3,29 +3,46 @@ version: 2.1
 orbs:
   ruby: circleci/ruby@2.0.0
 jobs:
-  build:
+  build_and_test:
     docker:
       - image: cimg/ruby:2.7.2
     steps:
       - checkout
       - run:
           name: "gem build"
-          command: |
-            ruby -S gem build *.gemspec
-            ruby -S gem install *.gem
+          command: ruby -S gem build *.gemspec 
+      - run:
+          name: "gem install"
+          command: ruby -S gem install *.gem
       - run:
           name: "gem test"
+          command: ruby -S sample/samplez.rb
+  deploy:
+    docker:
+      - image: cimg/ruby:2.7.2
+    steps:
+      - checkout
+      - run:
+          name: "RubyGems.org | Set credential"
           command: |
-            ruby -S sample/samplez.rb
-
-
+            mkdir -p ~/.gem
+            echo ":rubygems_api_key: $RUBYGEMS_API_KEY" > ~/.gem/credentials
+            chmod 0600 ~/.gem/credentials
+      - run:
+          name: "gem push"
+          command: |
+            ruby -S gem build *.gemspec
+            ruby -S gem push *.gem       
 workflows:
   version: 2.1
   my-workflow:
     jobs:
-      - build:
+      - build_and_test:
           filters:
             branches:
               only:
                 - main
+      - deploy:
+          requires:
+            - build_and_test
 
