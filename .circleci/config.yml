@@ -26,7 +26,7 @@ jobs:
           name: "RubyGems.org | Set credential"
           command: |
             mkdir -p ~/.gem
-            echo ":rubygems_api_key: $RUBYGEMS_AUTH_TOKEN" > ~/.gem/credentials
+            echo ":rubygems_api_key: $RUBYGEMS_API_KEY" > ~/.gem/credentials
             chmod 0600 ~/.gem/credentials
       - run:
           name: "gem push"
