@@ -13,6 +13,6 @@ Gem::Specification.new do |s|
       'homepage_uri'      => s.homepage,
   }
   s.license       = "MIT"
-  s.files       = ["LICENSE", "Gemfile", "CHANGELOG.md"]
+  s.files       = ["Gemfile", "CHANGELOG.md"]
   s.files       += Dir.glob("{lib,ext}/**/*")
 end
