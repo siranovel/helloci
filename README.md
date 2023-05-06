@@ -26,7 +26,7 @@ or from the git repository on github:
 ~~~
     git clone https://github.com/siranovel/helloci.git  
     cd helloci  
-    jruby -S gem build mothball.gemspec
+    jruby -S gem build helloci.gemspec
     jruby -S gem install mothball
 ~~~
 
