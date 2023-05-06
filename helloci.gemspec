@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'mothball'
-  s.version       = '0.0.4'
+  s.version       = '0.0.5'
   s.date          = '2023-05-05'
   s.summary       = "after n day from today"
   s.description   = "calculate after n day from today."
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
       'changelog_uri'     => 'http://github.com/siranovel/helloci/blob/main/CHANGELOG.md',
       'documentation_uri' => "https://rubydoc.info/gems/#{s.name}/#{s.version}",
       'homepage_uri'      => s.homepage,
-      'wiki_uri'          => 'http://github.com/siranovel/mydocs/helloci',
+      'wiki_uri'          => 'https://github.com/siranovel/mydocs/tree/main/helloci',
   }
   s.license       = "MIT"
   s.files       = ["LICENSE", "Gemfile", "CHANGELOG.md"]
