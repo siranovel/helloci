@@ -1,3 +1,10 @@
 require "mothball"
 
-p MothBallLib.prev_day(90)
+class MothBallLibTest
+    def next_dayTest(n)
+        p MothBallLib.next_day(4)
+    end
+end
+tst = MothBallLibTest.new
+tst.next_dayTest(2)
+
