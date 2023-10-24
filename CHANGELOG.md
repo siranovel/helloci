@@ -2,10 +2,18 @@
 
 ## Unreleased
 
-## [0.0.3] - 2023-04-17 
+## [0.0.6] - 2023-10-23 
+
+### change
+- function name from prev_day to next_day.
 
 ### Added
-- wiki__uri into emspec file.
+- add yardoc.
+
+## [0.0.5] - 2023-05-05 
+
+### Added
+- wiki_uri into gemspec file.
 
 ## [0.0.3] - 2023-04-17 
 
