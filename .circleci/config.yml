@@ -32,7 +32,7 @@ jobs:
           name: "gem push"
           command: |
             ruby -S gem build *.gemspec
-            ruby -S gem push *.gem       
+            ruby -S gem push *.gem  --otp 688980     
 workflows:
   version: 2.1
   my-workflow:
