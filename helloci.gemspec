@@ -12,7 +12,6 @@ Gem::Specification.new do |s|
       'documentation_uri' => "https://rubydoc.info/gems/#{s.name}/#{s.version}",
       'homepage_uri'      => s.homepage,
       'wiki_uri'          => 'https://github.com/siranovel/mydocs/tree/main/helloci',
-      'rubygems_mfa_required' => "true"
   }
   s.license       = "MIT"
   s.files       = ["LICENSE", "Gemfile", "CHANGELOG.md"]
